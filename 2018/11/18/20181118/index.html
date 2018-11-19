@@ -95,7 +95,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/18/20181118/201811181542.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/18/20181118/201811181816.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/18/20181118/201811182012.png">
-<meta property="og:updated_time" content="2018-11-18T13:35:16.312Z">
+<meta property="og:updated_time" content="2018-11-19T03:01:30.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS布局-三栏布局实现">
 <meta name="twitter:description" content="三栏是CSS布局中常见的一种布局模式，顾名思义，就是将网页内容以三列的形式呈现。通常，三栏布局中的左栏和右栏是固定宽度的，中栏随着窗口宽度的变化而变化。本文探讨栏三栏的基本实现思路和经典方法，对其中涉及到的知识点进行梳理。      目的：实现一个左栏和右栏宽300px，中间栏宽度自适应的三栏布局  基本实现思路首先，常规思路，我们写出3个div的HTML和CSS，分别是leftColumn(左">
@@ -392,7 +392,7 @@
 </code></pre><p>得到的效果如下图所示：</p>
 <p><img src="/2018/11/18/20181118/201811181105.png" alt="201811181105.png"></p>
 <p>此时，中栏的宽度仍为其内容的适应宽度，我们为middleDiv添加如下语句：</p>
-<pre><code>width: calc(100% - 300px);  /*设置middleDiv宽度*/
+<pre><code>width: calc(100% - 600px);  /*设置middleDiv宽度*/
 </code></pre><blockquote>
 <p>calc()的作用为动态计算长度值，允许各种单位混合运算，运算符前后需有空格。</p>
 </blockquote>
@@ -407,7 +407,7 @@
     &lt;div id=&quot;leftDiv&quot;&gt;左栏&lt;/div&gt;
     &lt;div id=&quot;rightDiv&quot;&gt;右栏&lt;/div&gt;
 &lt;/body&gt;
-</code></pre><p>CSS中，我们仍然设置middleDiv(中栏)的宽度为100%-600px：</p>
+</code></pre><p>CSS中，我们仍然设置middleDiv(中栏)的宽度为100% - 600px：</p>
 <pre><code>#middleDiv {
     width: calc(100% - 600px);
     ...
