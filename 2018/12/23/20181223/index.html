@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="bmwz110的博客">
 <meta property="og:description" content="1. let关键字let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。 var关键字声明变量的缺点：  作用域互相干扰  var arr = []; for(var i=0; i&amp;lt;10; i++) {     arr[i] = function() {         alert(i)     } } arr[5]();   //结果10  块级作用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-23T01:26:58.779Z">
+<meta property="og:updated_time" content="2018-12-23T01:31:12.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6知识点整理">
 <meta name="twitter:description" content="1. let关键字let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。 var关键字声明变量的缺点：  作用域互相干扰  var arr = []; for(var i=0; i&amp;lt;10; i++) {     arr[i] = function() {         alert(i)     } } arr[5]();   //结果10  块级作用">
@@ -333,7 +333,7 @@
 
       
         <hr>
-<h3 id="1-let关键字"><a href="#1-let关键字" class="headerlink" title="1. let关键字"></a>1. let关键字</h3><p>let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。</p>
+<h2 id="1-let关键字"><a href="#1-let关键字" class="headerlink" title="1. let关键字"></a>1. let关键字</h2><p>let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。</p>
 <p><strong>var关键字声明变量的缺点</strong>：</p>
 <ol>
 <li>作用域互相干扰</li>
@@ -416,7 +416,8 @@ x = function(a) {
 x();   //a has already been declared
 </code></pre><p>这是因为函数通过参数引入了”var a = 1”，相当于在函数体内存在了这一声明，再使用let对a进行声明便犯了重复声明的错误，</p>
 <p>总结： let关键字：1.只在块级作用域起作用；2.不可重复声明同一变量；3.不可声明函数参数；</p>
-<h3 id="2-const关键字"><a href="#2-const关键字" class="headerlink" title="2. const关键字"></a>2. const关键字</h3><p>const是constant(常量)的缩写，专用于声明常量。</p>
+<hr>
+<h2 id="2-const关键字"><a href="#2-const关键字" class="headerlink" title="2. const关键字"></a>2. const关键字</h2><p>const是constant(常量)的缩写，专用于声明常量。</p>
 <p>++let关键字有的特性，const全都有，并且const还多了2个特性++：</p>
 <p>特性1: 不可修改</p>
 <pre><code>const a = 1;
@@ -587,7 +588,7 @@ console.log(a);   //{number:2, name:math}
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-let关键字"><span class="nav-number">1.</span> <span class="nav-text">1. let关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-const关键字"><span class="nav-number">2.</span> <span class="nav-text">2. const关键字</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-let关键字"><span class="nav-number">1.</span> <span class="nav-text">1. let关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-const关键字"><span class="nav-number">2.</span> <span class="nav-text">2. const关键字</span></a></li></ol></div>
             
 
           </div>
