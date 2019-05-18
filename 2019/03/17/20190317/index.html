@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="1. let关键字let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。 var关键字声明变量的缺点：  作用域互相干扰  var arr = []; for(var i=0; i&amp;lt;10; i++) {     arr[i] = function() {         alert(i)     } } arr[5]();   //结果10  块级作用域">
+<meta name="description" content="1. let关键字let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。 var关键字声明变量的缺点：  作用域互相干扰  1234567var arr = [];for(var i=0; i&amp;lt;10; i++) &amp;#123;    arr[i] = function() &amp;#123;        alert(i)    &amp;#125;&amp;#125;arr[">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6知识点整理">
 <meta property="og:url" content="http://yoursite.com/2019/03/17/20190317/index.html">
 <meta property="og:site_name" content="bmwz110的博客">
-<meta property="og:description" content="1. let关键字let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。 var关键字声明变量的缺点：  作用域互相干扰  var arr = []; for(var i=0; i&amp;lt;10; i++) {     arr[i] = function() {         alert(i)     } } arr[5]();   //结果10  块级作用域">
+<meta property="og:description" content="1. let关键字let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。 var关键字声明变量的缺点：  作用域互相干扰  1234567var arr = [];for(var i=0; i&amp;lt;10; i++) &amp;#123;    arr[i] = function() &amp;#123;        alert(i)    &amp;#125;&amp;#125;arr[">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-17T14:24:47.782Z">
+<meta property="og:updated_time" content="2019-05-17T12:45:07.977Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6知识点整理">
-<meta name="twitter:description" content="1. let关键字let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。 var关键字声明变量的缺点：  作用域互相干扰  var arr = []; for(var i=0; i&amp;lt;10; i++) {     arr[i] = function() {         alert(i)     } } arr[5]();   //结果10  块级作用域">
+<meta name="twitter:description" content="1. let关键字let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。 var关键字声明变量的缺点：  作用域互相干扰  1234567var arr = [];for(var i=0; i&amp;lt;10; i++) &amp;#123;    arr[i] = function() &amp;#123;        alert(i)    &amp;#125;&amp;#125;arr[">
 
 
 
@@ -345,11 +345,6 @@
           
 
           
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
-            </span>
-          
 
           
 
@@ -371,103 +366,38 @@
         <h2 id="1-let关键字"><a href="#1-let关键字" class="headerlink" title="1. let关键字"></a>1. let关键字</h2><p>let关键字是ES6添加的新关键字，作用是声明变量，主要为了弥补var关键字声明变量的缺点。</p>
 <p><strong>var关键字声明变量的缺点</strong>：</p>
 <ol>
-<li>作用域互相干扰</li>
+<li><p>作用域互相干扰</p>
+ <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++) &#123;</span><br><span class="line">    arr[i] = <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        alert(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">arr[<span class="number">5</span>]();   <span class="comment">//结果10</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<pre><code>var arr = [];
-for(var i=0; i&lt;10; i++) {
-    arr[i] = function() {
-        alert(i)
-    }
-}
-arr[5]();   //结果10
-</code></pre><blockquote>
+<blockquote>
 <p>块级作用域：一对花括号{}就是一个块，for循环的每一次循环都会创建一个块。</p>
 </blockquote>
 <p>可以看出，var声明的变量i的值会干扰到各个块级作用域里的i，最后一个i的值为10，于是其他块级作用域中的i也都变成了10。</p>
-<p>将var替换为let来声明变量就可以规避这种干扰：</p>
-<pre><code>...
-for(let i=0; i&lt;10; i++)
-...
-arr[5]();   //结果5
-</code></pre><ol start="2">
+<p>将var替换为let来声明变量就可以规避这种干扰：<br>    <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">for(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)</span><br><span class="line">...</span><br><span class="line">arr[<span class="number">5</span>]();   <span class="comment">//结果5</span></span><br></pre></td></tr></table></figure></p>
+<ol start="2">
 <li>“变量提升”现象</li>
 </ol>
-<p>观察下面这段代码：</p>
-<pre><code>var a = 1;
-x = function() {
-    alert(a);
-    var a = 2;
-};
-x();   //undefined
-console.log(a);   //1
-</code></pre><p>预期的输出结果应该是：先弹出alert窗口显示1，然后a的值在函数体内的局部作用域被赋为2。但现实情况是alert窗口显示undefined。</p>
-<p>这是因为上述函数内声明并定义变量a的语句”var a = 2”实际被拆分为两部分”var a”和”a = 2”，且第一部分”var a”被提前到函数体最前端（如下）：</p>
-<pre><code>var a = 1;
-x = function() {
-    var a;
-    alert(a);
-    a = 2;
-};
-x();
-</code></pre><p>对于alert(a)来说，局部变量a并未定义，从而导致alert(a)出现undefined，这就是变量提升现象。</p>
-<p>同样，使用let可以消除这种影响：</p>
-<pre><code>var a = 1;
-x = function() {
-    alert(a);
-    let a = 2;
-};
-x();   //a is not defined
-console.log(a);   //1
-</code></pre><p>这是因为，块级作用域内let声明变量a是封闭自给的，外界的变量a无法作用于内部。此时，要求“先声明后使用”，需要将”let a = 2”写在”alert(a)”之前。</p>
-<pre><code>var a = 1;
-x = function() {
-    let a = 2;
-    alert(a); 
-};
-x();   //&quot;弹窗提示&quot;：2
-console.log(a);   //1
-</code></pre><p>需要注意的是：同一个块级作用域内，使用let声明变量时，同一个变量只允许声明1次。以下做法是错误的：</p>
-<pre><code>{
-    var a = 1;
-    let a = 2;
-}   //a has already been declared
-
-{
-    let a = 1;
-    var a = 2;
-}   //a has already been declared
-
-{
-    let a = 1;
-    let a = 2;
-}   //a has already been declared
-</code></pre><p>还有需要注意的是：函数内不能使用let重新声明函数的参数。以下做法是错误的：  </p>
-<pre><code>var a = 1;
-x = function(a) {
-    let a = 2;
-    alert(a);
-
-}
-x();   //a has already been declared
-</code></pre><p>这是因为函数通过参数引入了”var a = 1”，相当于在函数体内存在了这一声明，再使用let对a进行声明便犯了重复声明的错误，</p>
+<p>观察下面这段代码：<br>    <figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">x = <span class="function"><span class="keyword">function</span><span class="params">()</span> <span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    alert(a);</span></span></span><br><span class="line"><span class="function"><span class="comment">    var a = 2;</span></span></span><br><span class="line"><span class="function"><span class="comment">&#125;</span>;</span></span><br><span class="line">x();   <span class="comment">//undefined</span></span><br><span class="line">console.log(a);   <span class="comment">//1</span></span><br></pre></td></tr></table></figure></p>
+<p>预期的输出结果应该是：先弹出alert窗口显示1，然后a的值在函数体内的局部作用域被赋为2。但现实情况是alert窗口显示undefined。</p>
+<p>这是因为上述函数内声明并定义变量a的语句”var a = 2”实际被拆分为两部分”var a”和”a = 2”，且第一部分”var a”被提前到函数体最前端（如下）：<br>    <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = <span class="number">1</span><span class="comment">;</span></span><br><span class="line"><span class="attribute">x</span> = function() &#123;</span><br><span class="line">    var a<span class="comment">;</span></span><br><span class="line">    alert(a)<span class="comment">;</span></span><br><span class="line">    a = <span class="number">2</span><span class="comment">;</span></span><br><span class="line">&#125;<span class="comment">;</span></span><br><span class="line">x()<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>对于alert(a)来说，局部变量a并未定义，从而导致alert(a)出现undefined，这就是变量提升现象。</p>
+<p>同样，使用let可以消除这种影响：<br>    <figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">x = <span class="function"><span class="keyword">function</span><span class="params">()</span> <span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    alert(a);</span></span></span><br><span class="line"><span class="function"><span class="comment">    let a = 2;</span></span></span><br><span class="line"><span class="function"><span class="comment">&#125;</span>;</span></span><br><span class="line">x();   <span class="comment">//a is not defined</span></span><br><span class="line">console.log(a);   <span class="comment">//1</span></span><br></pre></td></tr></table></figure></p>
+<p>这是因为，块级作用域内let声明变量a是封闭自给的，外界的变量a无法作用于内部。此时，要求“先声明后使用”，需要将”let a = 2”写在”alert(a)”之前。<br>    <figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">x = <span class="function"><span class="keyword">function</span><span class="params">()</span> <span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    let a = 2;</span></span></span><br><span class="line"><span class="function"><span class="comment">    alert(a); </span></span></span><br><span class="line"><span class="function"><span class="comment">&#125;</span>;</span></span><br><span class="line">x();   <span class="comment">//"弹窗提示"：2</span></span><br><span class="line">console.log(a);   <span class="comment">//1</span></span><br></pre></td></tr></table></figure></p>
+<p>需要注意的是：同一个块级作用域内，使用let声明变量时，同一个变量只允许声明1次。以下做法是错误的：<br>    <figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">2</span>;</span><br><span class="line">&#125;   <span class="comment">//a has already been declared</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line">&#125;   <span class="comment">//a has already been declared</span></span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">2</span>;</span><br><span class="line">&#125;   <span class="comment">//a has already been declared</span></span><br></pre></td></tr></table></figure></p>
+<p>还有需要注意的是：函数内不能使用let重新声明函数的参数。以下做法是错误的：<br>    <figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">x = <span class="function"><span class="keyword">function</span><span class="params">(a)</span> <span class="comment">&#123;</span></span></span><br><span class="line"><span class="function"><span class="comment">    let a = 2;</span></span></span><br><span class="line"><span class="function"><span class="comment">    alert(a);</span></span></span><br><span class="line"><span class="function"><span class="comment">    </span></span></span><br><span class="line"><span class="function"><span class="comment">&#125;</span></span></span><br><span class="line"><span class="function"><span class="title">x</span><span class="params">()</span>;</span>   <span class="comment">//a has already been declared</span></span><br></pre></td></tr></table></figure></p>
+<p>这是因为函数通过参数引入了”var a = 1”，相当于在函数体内存在了这一声明，再使用let对a进行声明便犯了重复声明的错误，</p>
 <p>总结： let关键字：1.只在块级作用域起作用；2.不可重复声明同一变量；3.不可声明函数参数；</p>
 <h3 id="2-const关键字"><a href="#2-const关键字" class="headerlink" title="2. const关键字"></a>2. const关键字</h3><p>const是constant(常量)的缩写，专用于声明常量。</p>
 <p>++let关键字有的特性，const全都有，并且const还多了2个特性++：</p>
-<p>特性1: 不可修改</p>
-<pre><code>const a = 1;
-a = 2;   //error
-</code></pre><p>特性2: 声明后必须赋值</p>
-<pre><code>const a;   //error
-</code></pre><p>对于特性1，有一点需要注意，当常量是值时，传值赋值的值是不可修改的。即当常量是一个对象时，使用的是传址赋值，不可修改的是“址”，而不是“值”。</p>
-<p>例如：</p>
-<pre><code>const a = {&quot;number&quot;:1};
-a.number = 2;
-a.name = &quot;math&quot;;
-console.log(a);   //{number:2, name:math}
-</code></pre><p>即对于传址赋值的情况，在值的层面是可以修改的。</p>
+<p>特性1: 不可修改<br>    <figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const a = <span class="number">1</span><span class="comment">;</span></span><br><span class="line"><span class="attribute">a</span> = <span class="number">2</span><span class="comment">;   //error</span></span><br></pre></td></tr></table></figure></p>
+<p>特性2: 声明后必须赋值<br>    <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a;   <span class="comment">//error</span></span><br></pre></td></tr></table></figure></p>
+<p>对于特性1，有一点需要注意，当常量是值时，传值赋值的值是不可修改的。即当常量是一个对象时，使用的是传址赋值，不可修改的是“址”，而不是“值”。</p>
+<p>例如：<br>    <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const a = &#123;<span class="string">"number"</span>:<span class="number">1</span>&#125;<span class="comment">;</span></span><br><span class="line">a.number = <span class="number">2</span><span class="comment">;</span></span><br><span class="line">a.name = <span class="string">"math"</span><span class="comment">;</span></span><br><span class="line">console.log(a)<span class="comment">;   //&#123;number:2, name:math&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>即对于传址赋值的情况，在值的层面是可以修改的。</p>
 <h3 id="3-Symbol"><a href="#3-Symbol" class="headerlink" title="3. Symbol"></a>3. Symbol</h3><p>Symbol是ES6中新增的数据类型，与之前的Number, String, Boolean, Null, Undefined, Object一起，成为7大数据类型。</p>
 <p><strong>作用</strong>：主要是为了防止属性名冲突造成的覆盖。例如当你调用他人的对象时，添加了一个名为a的方法，可能会覆盖掉他人对象中原本的a。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    let obj = &#123;</span><br><span class="line">      a: &quot;hello&quot;,</span><br><span class="line">      b: &quot;world&quot;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    let a = Symbol();</span><br><span class="line">    let b = Symbol(&quot;标记&quot;);  //Symbol中的字符串是为了区分不同的Symbol</span><br><span class="line">    obj[a] = &quot;one&quot;;</span><br><span class="line">    obj[b] = &quot;two&quot;;</span><br><span class="line">    </span><br><span class="line">    console.log(obj);</span><br><span class="line">    // a: &quot;hello&quot;</span><br><span class="line">    // b: &quot;world&quot;</span><br><span class="line">    // Symbol(): &quot;one&quot;</span><br><span class="line">    // Symbol(标记): &quot;two&quot;</span><br><span class="line">    console.log(obj.a);  //hello</span><br><span class="line">    console.log(obj[a]);  //one</span><br><span class="line">    for(let item in obj) &#123;</span><br><span class="line">      console.log(item)</span><br><span class="line">    &#125;  // a b</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> obj = &#123;</span></span><br><span class="line"><span class="actionscript">      a: <span class="string">"hello"</span>,</span></span><br><span class="line"><span class="actionscript">      b: <span class="string">"world"</span></span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> a = <span class="built_in">Symbol</span>();</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> b = <span class="built_in">Symbol</span>(<span class="string">"标记"</span>);  <span class="comment">//Symbol中的字符串是为了区分不同的Symbol</span></span></span><br><span class="line"><span class="actionscript">    obj[a] = <span class="string">"one"</span>;</span></span><br><span class="line"><span class="actionscript">    obj[b] = <span class="string">"two"</span>;</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(obj);</span></span><br><span class="line"><span class="actionscript">    <span class="comment">// a: "hello"</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// b: "world"</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// Symbol(): "one"</span></span></span><br><span class="line"><span class="actionscript">    <span class="comment">// Symbol(标记): "two"</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(obj.a);  <span class="comment">//hello</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(obj[a]);  <span class="comment">//one</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">in</span> obj) &#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(item)</span></span><br><span class="line"><span class="actionscript">    &#125;  <span class="comment">// a b</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>其他关于Symbol的具体特性，可参见<a href="http://es6.ruanyifeng.com/?search=symbol&amp;x=15&amp;y=10#docs/symbol" target="_blank" rel="noopener">http://es6.ruanyifeng.com/?search=symbol&amp;x=15&amp;y=10#docs/symbol</a></p>
 
       
@@ -684,26 +614,6 @@ console.log(a);   //{number:2, name:math}
 
 
         
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-      
-    </span>
-  
-
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-      
-    </span>
-  
-</div>
-
 
 
 
