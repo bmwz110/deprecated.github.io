@@ -79,19 +79,17 @@
 
 
 
-<meta name="description" content="什么是深拷贝和浅拷贝呢？   名称 定义     浅拷贝 对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝   深拷贝 对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容    也就是说，对于a，让b对a进行拷贝，之后当a发生变化，若b也跟着发生变化，就是浅拷贝；若a发生变化，b不变化，那就是深拷贝。    基本数据类型 引用数据类型     Number、Str">
+<meta name="description" content="闭包及其应用什么是闭包？“在函数内使用其它函数内的变量，是为闭包” 【例1】：12345678function a() &amp;#123;    let num = 100;    return function b() &amp;#123;        console.log(num)    &amp;#125;&amp;#125;var c = a()c()   // 100 在例 1 中，a 为外层函数，a中返回了一个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浅拷贝和深拷贝">
-<meta property="og:url" content="http://yoursite.com/2019/04/08/20190408/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/05/26/20190526/index.html">
 <meta property="og:site_name" content="bmwz110的博客">
-<meta property="og:description" content="什么是深拷贝和浅拷贝呢？   名称 定义     浅拷贝 对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝   深拷贝 对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容    也就是说，对于a，让b对a进行拷贝，之后当a发生变化，若b也跟着发生变化，就是浅拷贝；若a发生变化，b不变化，那就是深拷贝。    基本数据类型 引用数据类型     Number、Str">
+<meta property="og:description" content="闭包及其应用什么是闭包？“在函数内使用其它函数内的变量，是为闭包” 【例1】：12345678function a() &amp;#123;    let num = 100;    return function b() &amp;#123;        console.log(num)    &amp;#125;&amp;#125;var c = a()c()   // 100 在例 1 中，a 为外层函数，a中返回了一个">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/04/08/20190408/201904081925.png">
-<meta property="og:updated_time" content="2019-05-17T06:01:49.216Z">
+<meta property="og:updated_time" content="2019-05-26T13:56:59.765Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅拷贝和深拷贝">
-<meta name="twitter:description" content="什么是深拷贝和浅拷贝呢？   名称 定义     浅拷贝 对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝   深拷贝 对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容    也就是说，对于a，让b对a进行拷贝，之后当a发生变化，若b也跟着发生变化，就是浅拷贝；若a发生变化，b不变化，那就是深拷贝。    基本数据类型 引用数据类型     Number、Str">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/08/20190408/201904081925.png">
+<meta name="twitter:description" content="闭包及其应用什么是闭包？“在函数内使用其它函数内的变量，是为闭包” 【例1】：12345678function a() &amp;#123;    let num = 100;    return function b() &amp;#123;        console.log(num)    &amp;#125;&amp;#125;var c = a()c()   // 100 在例 1 中，a 为外层函数，a中返回了一个">
 
 
 
@@ -121,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/04/08/20190408/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/26/20190526/">
 
 
 
@@ -276,7 +274,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/20190408/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/26/20190526/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bmwz110">
@@ -305,8 +303,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-08T19:05:23+08:00">
-                2019-04-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-26T22:05:23+08:00">
+                2019-05-26
               </time>
             
 
@@ -365,52 +363,30 @@
       
 
       
-        <h3 id="什么是深拷贝和浅拷贝呢？"><a href="#什么是深拷贝和浅拷贝呢？" class="headerlink" title="什么是深拷贝和浅拷贝呢？"></a>什么是深拷贝和浅拷贝呢？</h3><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>定义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>浅拷贝</td>
-<td>对基本数据类型进行值传递，对引用数据类型进行引用传递般的拷贝</td>
-</tr>
-<tr>
-<td>深拷贝</td>
-<td>对基本数据类型进行值传递，对引用数据类型，创建一个新的对象，并复制其内容</td>
-</tr>
-</tbody>
-</table>
-<p>也就是说，对于a，让b对a进行拷贝，之后当a发生变化，若b也跟着发生变化，就是浅拷贝；若a发生变化，b不变化，那就是深拷贝。</p>
-<table>
-<thead>
-<tr>
-<th>基本数据类型</th>
-<th>引用数据类型</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Number、String、Boolean、Null、Undefined等</td>
-<td>Object、Array、Function等</td>
-</tr>
-</tbody>
-</table>
-<p><strong>基本数据类型</strong>是按值访问的，对其的拷贝会直接复制其值保存在新变量中。例如Number类型：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = 1;</span><br><span class="line">b = a;</span><br><span class="line">console.log(b); // 1</span><br><span class="line">a = 2;</span><br><span class="line">console.log(b);  //1 （a的变化不会影响b的值）</span><br></pre></td></tr></table></figure>
-<p>而“引用数据类型”是按引用访问的，对其直接进行拷贝只会操作引用地址，而不是值本身。例如Array类型：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = [1, 2, 3];</span><br><span class="line">b = a;</span><br><span class="line">console.log(a);  // [1, 2, 3]</span><br><span class="line">console.log(b);  // [1, 2, 3]</span><br><span class="line">a[0] = 2;</span><br><span class="line">console.log(a);  // [2, 2, 3]</span><br><span class="line">console.log(b);  // [2, 2, 3]  （对数组a的改动也影响了数组b）</span><br></pre></td></tr></table></figure>
-<p>其原理如下图所示：</p>
-<p><img src="/2019/04/08/20190408/201904081925.png" alt="201904081925.png"></p>
-<p><strong>那么，如何对引用数据类型实现深拷贝呢？</strong></p>
+        <h1 id="闭包及其应用"><a href="#闭包及其应用" class="headerlink" title="闭包及其应用"></a>闭包及其应用</h1><h3 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h3><p>“在函数内使用其它函数内的变量，是为闭包”</p>
+<p>【例1】：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> num = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(num)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> c = a()</span><br><span class="line">c()   <span class="comment">// 100</span></span><br></pre></td></tr></table></figure></p>
+<p>在例 1 中，a 为外层函数，a中返回了一个内部函数 b ， <strong>++函数 b 中使用了 a 中的 num 变量++</strong>。此时，函数 b 就形成了一个闭包。</p>
+<h3 id="闭包的用处是什么？"><a href="#闭包的用处是什么？" class="headerlink" title="闭包的用处是什么？"></a>闭包的用处是什么？</h3><p>在JavaScript中，作用域链使得子作用域能够读取到父作用域的变量【见例2】，而反过来，父作用域无法直接获取子作用域的变量【见例3】。</p>
+<p>【例2】<br><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let <span class="built_in">num</span> = <span class="number">100</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>() &#123;</span></span><br><span class="line">    console.<span class="built_in">log</span>(<span class="built_in">num</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">a</span>()  <span class="comment"> // 100</span></span><br></pre></td></tr></table></figure></p>
+<p>【例3】<br><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function a() &#123;</span><br><span class="line">    <span class="built_in">let</span> <span class="built_in">num</span> = <span class="number">100</span></span><br><span class="line">&#125;</span><br><span class="line">console.<span class="built_in">log</span>(<span class="built_in">num</span>)   // <span class="built_in">error</span>: <span class="built_in">num</span> <span class="built_in">is</span> <span class="keyword">not</span> defined</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>显而易见的思路是：既然是因为引用地址造成了无法深拷贝，那就抛开引用地址，直接对值进行遍历，将其拷贝给新的变量。</p>
+<p>当我们想在父作用域使用子作用域的值时该怎么办呢？</p>
 </blockquote>
-<h4 id="方法1-手工遍历法"><a href="#方法1-手工遍历法" class="headerlink" title="方法1: 手工遍历法"></a>方法1: 手工遍历法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">let a = [1, [2, 3], 4];</span><br><span class="line">const copy = (obj) =&gt; &#123;</span><br><span class="line">  let newObj = obj.constructor === Array ? [] : &#123;&#125;</span><br><span class="line">  if(typeof obj !== &apos;object&apos;) &#123;</span><br><span class="line">    return;</span><br><span class="line">  &#125;</span><br><span class="line">  for(let i in obj) &#123;</span><br><span class="line">    newObj[i] = typeof obj[i] === &apos;object&apos; ? copy(obj[i]) : obj[i]</span><br><span class="line">  &#125;</span><br><span class="line">  return newObj</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let b = copy(a);  </span><br><span class="line">a[1][0] = 3;</span><br><span class="line">console.log(a);  // [1, [3, 3], 4]</span><br><span class="line">console.log(b);  // [1, [2, 3], 4]</span><br></pre></td></tr></table></figure>
-<h4 id="方法2-JSON方法"><a href="#方法2-JSON方法" class="headerlink" title="方法2: JSON方法"></a>方法2: JSON方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let a = [1, [2, 3], 4];</span><br><span class="line"></span><br><span class="line">const copy = (obj) =&gt; &#123;</span><br><span class="line">  let _obj = JSON.stringify(obj)</span><br><span class="line">  let newObj = JSON.parse(_obj)</span><br><span class="line">  return newObj</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let b = copy(a);  </span><br><span class="line">a[1][0] = 3;</span><br><span class="line">console.log(a);  // [1, [3, 3], 4]</span><br><span class="line">console.log(b);  // [1, [2, 3], 4]</span><br></pre></td></tr></table></figure>
-<h4 id="方法3-JQuery-extend方法"><a href="#方法3-JQuery-extend方法" class="headerlink" title="方法3: JQuery-extend方法"></a>方法3: JQuery-extend方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let a = [1, [2, 3], 4];</span><br><span class="line"></span><br><span class="line">b = $.extend(true,[],a);</span><br><span class="line"></span><br><span class="line">a[1][0] = 3;</span><br><span class="line">console.log(a);  // [1, [3, 3], 4]</span><br><span class="line">console.log(b);  // [1, [2, 3], 4]</span><br></pre></td></tr></table></figure>
+<p>答：那就在函数内部再定一个函数，将其作为返回值即可【例4】。</p>
+<p>【例4】<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> num = <span class="number">100</span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> x = a()</span><br><span class="line"><span class="built_in">console</span>.log(x())   <span class="comment">// 100</span></span><br></pre></td></tr></table></figure></p>
+<p>例 4 中，函数 b 作为函数 a 的内部函数，可以访问 a 中的变量 num，于是我们将函数 b 作为返回值，我们通过操作 b 来访问 a 的变量。</p>
+<p>上述利用闭包的特性来实现外部对内部的访问，便是闭包最基本的应用。</p>
+<h3 id="闭包的应用场景"><a href="#闭包的应用场景" class="headerlink" title="闭包的应用场景"></a>闭包的应用场景</h3><h5 id="1-封装变量以控制权限"><a href="#1-封装变量以控制权限" class="headerlink" title="1. 封装变量以控制权限"></a>1. 封装变量以控制权限</h5><p>一般来说，我们只想让外界使用我们暴露出去的方法，而方法涉及到的变量计算想要封装在函数内部，以避免被有意/无意地修改变量值，此时，便可利用闭包来进行变量封装以控制权限【例5】。</p>
+<p>【例5】<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断输入的变量是否是第一次输入</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isFirstVisit</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> _list = []</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (_list.indexOf(id) &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"Exist!"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            _list.push(id)</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">"Added~"</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> firstVisit = isFirstVisit()</span><br><span class="line">firstVisit(<span class="number">5</span>)   <span class="comment">// Added~</span></span><br><span class="line">firstVisit(<span class="number">5</span>)   <span class="comment">// Exist!</span></span><br><span class="line">firstVisit(<span class="number">10</span>)   <span class="comment">// Added~</span></span><br></pre></td></tr></table></figure></p>
+<p>将 isFirstVisit 的返回值赋给 firstVisit ，然后通过使用 firstVisit 进行判断，因为暴露给外界使用的是 firstVisit 函数，所以只能使用该函数定义的方法，而无法对 _list 进行任何修改，保证了数据的私密性。</p>
+<h5 id="2-函数柯里化"><a href="#2-函数柯里化" class="headerlink" title="2. 函数柯里化"></a>2. 函数柯里化</h5><p>函数柯里化就是把一个函数接收多个参数进行处理，转变为接收单一参数，然后返回一个新函数接收下一个参数【见例6】。<br>【例6】<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span><span class="params">(x, y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x + y</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 函数柯里化</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curryingSum</span><span class="params">(x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">(y)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x + y</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里函数柯里化后的内部函数所使用的 x，就是其父作用域的变量，此时的内部函数就是一个闭包。</p>
+<blockquote>
+<p>函数柯里化应用之 <strong>参数复用</strong></p>
+</blockquote>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">function check(reg, txt) &#123;</span><br><span class="line">    return reg.test(txt)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 检验是否含有数字</span></span><br><span class="line"><span class="function"><span class="title">check</span><span class="params">(/\d+/g, <span class="string">'test'</span>)</span></span>       <span class="comment">// false</span></span><br><span class="line"><span class="function"><span class="title">check</span><span class="params">(/\d+/g, <span class="string">'abc'</span>)</span></span>       <span class="comment">// false</span></span><br><span class="line"><span class="function"><span class="title">check</span><span class="params">(/\d+/g, <span class="string">'2dd'</span>)</span></span>       <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 柯里化后</span></span><br><span class="line">function curryingCheck(reg) &#123;</span><br><span class="line">    return function(txt) &#123;</span><br><span class="line">        return reg.test(txt)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let hasNumber = curryingCheck(/\d+/g)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">hasNumber</span><span class="params">(<span class="string">'test'</span>)</span></span>      <span class="comment">// false</span></span><br><span class="line"><span class="function"><span class="title">hasNumber</span><span class="params">(<span class="string">'abc'</span>)</span></span>   <span class="comment">// false</span></span><br><span class="line"><span class="function"><span class="title">hasNumber</span><span class="params">(<span class="string">'2dd'</span>)</span></span>   <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p>通过上例可以看到，直接使用check函数，第一个参数“正则判断语句”在每次使用时都需要输入，既不美观也不方便。对其进行函数柯里化后，只需输入一次正则判断语句，便可对判断函数进行复用。</p>
+<h3 id="闭包带来的问题"><a href="#闭包带来的问题" class="headerlink" title="闭包带来的问题"></a>闭包带来的问题</h3><h5 id="内存占用"><a href="#内存占用" class="headerlink" title="内存占用"></a>内存占用</h5><p>由于闭包使用其它函数内的变量，所以垃圾回收机制不会对闭包相关的函数进行回收，占用内存空间。</p>
 
       
     </div>
@@ -435,8 +411,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/17/20190317/" rel="next" title="ES6知识点整理">
-                <i class="fa fa-chevron-left"></i> ES6知识点整理
+              <a href="/2019/04/13/20190413/" rel="next" title="浅拷贝和深拷贝">
+                <i class="fa fa-chevron-left"></i> 浅拷贝和深拷贝
               </a>
             
           </div>
@@ -522,7 +498,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -578,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是深拷贝和浅拷贝呢？"><span class="nav-number">1.</span> <span class="nav-text">什么是深拷贝和浅拷贝呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#方法1-手工遍历法"><span class="nav-number">1.1.</span> <span class="nav-text">方法1: 手工遍历法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法2-JSON方法"><span class="nav-number">1.2.</span> <span class="nav-text">方法2: JSON方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法3-JQuery-extend方法"><span class="nav-number">1.3.</span> <span class="nav-text">方法3: JQuery-extend方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#闭包及其应用"><span class="nav-number">1.</span> <span class="nav-text">闭包及其应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是闭包？"><span class="nav-number">1.0.1.</span> <span class="nav-text">什么是闭包？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的用处是什么？"><span class="nav-number">1.0.2.</span> <span class="nav-text">闭包的用处是什么？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包的应用场景"><span class="nav-number">1.0.3.</span> <span class="nav-text">闭包的应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-封装变量以控制权限"><span class="nav-number">1.0.3.0.1.</span> <span class="nav-text">1. 封装变量以控制权限</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-函数柯里化"><span class="nav-number">1.0.3.0.2.</span> <span class="nav-text">2. 函数柯里化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包带来的问题"><span class="nav-number">1.0.4.</span> <span class="nav-text">闭包带来的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#内存占用"><span class="nav-number">1.0.4.0.1.</span> <span class="nav-text">内存占用</span></a></li></ol></li></ol></div>
             
 
           </div>
