@@ -293,7 +293,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/05/26/20190526/" itemprop="url">浅拷贝和深拷贝</a></h1>
+                <a class="post-title-link" href="/2019/05/26/20190526/" itemprop="url">闭包及其应用</a></h1>
         
 
         <div class="post-meta">
@@ -368,7 +368,15 @@
         
           
           闭包及其应用什么是闭包？“在函数内使用其它函数内的变量，是为闭包”
-【例1】：12345678function a() &#123;    let num = 100;    return function b() &#123;        console.log(num)    &#125;&#
+【例1】
+function a() {
+    let num = 100;
+    return function b() {
+        console.log(num)
+    }
+}
+var c = a()
+c()   
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -741,7 +749,7 @@ var关键字声明变量的缺点：
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/02/20181202/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/02/20181202/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="bmwz110">
@@ -760,7 +768,7 @@ var关键字声明变量的缺点：
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/02/20181202/" itemprop="url">JS事件委托</a></h1>
+                <a class="post-title-link" href="/2019/01/02/20181202/" itemprop="url">JS事件委托</a></h1>
         
 
         <div class="post-meta">
@@ -772,8 +780,8 @@ var关键字声明变量的缺点：
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-02T21:32:00+08:00">
-                2018-12-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-02T21:32:00+08:00">
+                2019-01-02
               </time>
             
 
@@ -841,7 +849,7 @@ var关键字声明变量的缺点：
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/12/02/20181202/#more" rel="contents">
+            <a class="btn" href="/2019/01/02/20181202/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
